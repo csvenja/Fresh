@@ -21,6 +21,7 @@
 		D4131BC31914C0F80016DA3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4131BA51914C0F70016DA3F /* UIKit.framework */; };
 		D4131BCB1914C0F80016DA3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4131BC91914C0F80016DA3F /* InfoPlist.strings */; };
 		D4131BCD1914C0F80016DA3F /* FreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BCC1914C0F80016DA3F /* FreshTests.m */; };
+		D4131BD81916F7EA0016DA3F /* FREFood.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BD71916F7EA0016DA3F /* FREFood.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D4131BC81914C0F80016DA3F /* FreshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreshTests-Info.plist"; sourceTree = "<group>"; };
 		D4131BCA1914C0F80016DA3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D4131BCC1914C0F80016DA3F /* FreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshTests.m; sourceTree = "<group>"; };
+		D4131BD61916F7EA0016DA3F /* FREFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FREFood.h; sourceTree = "<group>"; };
+		D4131BD71916F7EA0016DA3F /* FREFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FREFood.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				D4131BB71914C0F70016DA3F /* FREViewController.m */,
 				D4131BB91914C0F70016DA3F /* Images.xcassets */,
 				D4131BA81914C0F70016DA3F /* Supporting Files */,
+				D4131BD61916F7EA0016DA3F /* FREFood.h */,
+				D4131BD71916F7EA0016DA3F /* FREFood.m */,
 			);
 			path = Fresh;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4131BB21914C0F70016DA3F /* FREAppDelegate.m in Sources */,
+				D4131BD81916F7EA0016DA3F /* FREFood.m in Sources */,
 				D4131BAE1914C0F70016DA3F /* main.m in Sources */,
 				D4131BB81914C0F70016DA3F /* FREViewController.m in Sources */,
 			);
