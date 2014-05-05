@@ -14,7 +14,6 @@
 		D4131BAE1914C0F70016DA3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BAD1914C0F70016DA3F /* main.m */; };
 		D4131BB21914C0F70016DA3F /* FREAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BB11914C0F70016DA3F /* FREAppDelegate.m */; };
 		D4131BB51914C0F70016DA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4131BB31914C0F70016DA3F /* Main.storyboard */; };
-		D4131BB81914C0F70016DA3F /* FREViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BB71914C0F70016DA3F /* FREViewController.m */; };
 		D4131BBA1914C0F70016DA3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4131BB91914C0F70016DA3F /* Images.xcassets */; };
 		D4131BC11914C0F80016DA3F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4131BC01914C0F80016DA3F /* XCTest.framework */; };
 		D4131BC21914C0F80016DA3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4131BA11914C0F70016DA3F /* Foundation.framework */; };
@@ -22,6 +21,8 @@
 		D4131BCB1914C0F80016DA3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4131BC91914C0F80016DA3F /* InfoPlist.strings */; };
 		D4131BCD1914C0F80016DA3F /* FreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BCC1914C0F80016DA3F /* FreshTests.m */; };
 		D4131BD81916F7EA0016DA3F /* FREFood.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BD71916F7EA0016DA3F /* FREFood.m */; };
+		D4131BDB191746080016DA3F /* FREFreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BDA191746080016DA3F /* FREFreshViewController.m */; };
+		D4131BDE191746270016DA3F /* FREDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4131BDD191746270016DA3F /* FREDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,6 @@
 		D4131BB01914C0F70016DA3F /* FREAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FREAppDelegate.h; sourceTree = "<group>"; };
 		D4131BB11914C0F70016DA3F /* FREAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FREAppDelegate.m; sourceTree = "<group>"; };
 		D4131BB41914C0F70016DA3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4131BB61914C0F70016DA3F /* FREViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FREViewController.h; sourceTree = "<group>"; };
-		D4131BB71914C0F70016DA3F /* FREViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FREViewController.m; sourceTree = "<group>"; };
 		D4131BB91914C0F70016DA3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D4131BBF1914C0F80016DA3F /* FreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4131BC01914C0F80016DA3F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,6 +55,10 @@
 		D4131BCC1914C0F80016DA3F /* FreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshTests.m; sourceTree = "<group>"; };
 		D4131BD61916F7EA0016DA3F /* FREFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FREFood.h; sourceTree = "<group>"; };
 		D4131BD71916F7EA0016DA3F /* FREFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FREFood.m; sourceTree = "<group>"; };
+		D4131BD9191746080016DA3F /* FREFreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FREFreshViewController.h; sourceTree = "<group>"; };
+		D4131BDA191746080016DA3F /* FREFreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FREFreshViewController.m; sourceTree = "<group>"; };
+		D4131BDC191746270016DA3F /* FREDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FREDetailViewController.h; sourceTree = "<group>"; };
+		D4131BDD191746270016DA3F /* FREDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FREDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +121,14 @@
 				D4131BB01914C0F70016DA3F /* FREAppDelegate.h */,
 				D4131BB11914C0F70016DA3F /* FREAppDelegate.m */,
 				D4131BB31914C0F70016DA3F /* Main.storyboard */,
-				D4131BB61914C0F70016DA3F /* FREViewController.h */,
-				D4131BB71914C0F70016DA3F /* FREViewController.m */,
 				D4131BB91914C0F70016DA3F /* Images.xcassets */,
 				D4131BA81914C0F70016DA3F /* Supporting Files */,
 				D4131BD61916F7EA0016DA3F /* FREFood.h */,
 				D4131BD71916F7EA0016DA3F /* FREFood.m */,
+				D4131BD9191746080016DA3F /* FREFreshViewController.h */,
+				D4131BDA191746080016DA3F /* FREFreshViewController.m */,
+				D4131BDC191746270016DA3F /* FREDetailViewController.h */,
+				D4131BDD191746270016DA3F /* FREDetailViewController.m */,
 			);
 			path = Fresh;
 			sourceTree = "<group>";
@@ -258,7 +263,8 @@
 				D4131BB21914C0F70016DA3F /* FREAppDelegate.m in Sources */,
 				D4131BD81916F7EA0016DA3F /* FREFood.m in Sources */,
 				D4131BAE1914C0F70016DA3F /* main.m in Sources */,
-				D4131BB81914C0F70016DA3F /* FREViewController.m in Sources */,
+				D4131BDB191746080016DA3F /* FREFreshViewController.m in Sources */,
+				D4131BDE191746270016DA3F /* FREDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
