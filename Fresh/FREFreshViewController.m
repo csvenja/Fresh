@@ -42,6 +42,13 @@
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -93,9 +100,12 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         [segue.destinationViewController setFood:[self.foods objectAtIndex:indexPath.row]];
         [segue.destinationViewController setTitle:[self.foods[indexPath.row] name]];
+        [segue.destinationViewController setFunction:FREDetailViewFunctionEdit];
     }
     else {
         [segue.destinationViewController setTitle:@"Add"];
+        [segue.destinationViewController setFunction:FREDetailViewFunctionAdd];
+        [segue.destinationViewController setFoods:self.foods];
     }
 }
 

@@ -176,7 +176,7 @@
                         <outlet property="freshDaysField" destination="u14-Gw-t7h" id="uss-r1-erP"/>
                         <outlet property="nameField" destination="EZQ-Cn-WWR" id="D5I-0m-6Bf"/>
                         <outlet property="productionDateField" destination="bhf-rQ-xde" id="yuo-O1-ml9"/>
-                        <outlet property="submit" destination="NBa-S5-Xi0" id="VDO-ZS-kRI"/>
+                        <outlet property="submitCell" destination="NBa-S5-Xi0" id="tDG-nG-gVC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mcJ-cL-O16" userLabel="First Responder" sceneMemberID="firstResponder"/>
