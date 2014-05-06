@@ -28,28 +28,6 @@ const int defaultFreshDays = 3;
     return self;
 }
 
-- (void)updateNotification
-{
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *notificationDays = [[NSDateComponents alloc] init];
-    notificationDays.day = self.food.freshDays.day / 5;
-    if (notificationDays.day < 1) {
-        notificationDays.day = 1;
-    }
-    NSDate *fireDate = [calendar dateByAddingComponents:notificationDays toDate:self.food.productionDate options:0];
-
-    if ([[[NSDate date] earlierDate:fireDate] isEqualToDate:fireDate]) {
-        self.food.notification.alertBody = [NSString stringWithFormat:@"%@ expired!", self.food.name];
-    }
-    else {
-        self.food.notification.alertBody = [NSString stringWithFormat:@"%@ almost expired!", self.food.name];
-    }
-
-    self.food.notification.fireDate = fireDate;
-    self.food.notification.timeZone = [NSTimeZone localTimeZone];
-    [[UIApplication sharedApplication] scheduleLocalNotification:self.food.notification];
-}
-
 - (void)updateFreshDaysField
 {
     self.freshDaysField.text = [NSString stringWithFormat:@"%ld day%@",
@@ -95,7 +73,7 @@ const int defaultFreshDays = 3;
     UITableViewCell *clickedCell = [self.tableView cellForRowAtIndexPath:indexPath];
     if ([clickedCell isEqual:self.submitCell]) {
         self.food.name = self.nameField.text;
-        [self updateNotification];
+        [self.food updateNotification];
         if (self.function == FREDetailViewFunctionAdd) {
             [self.foods insertObject:self.food atIndex:0];
         }
@@ -106,6 +84,7 @@ const int defaultFreshDays = 3;
 
 - (IBAction)dateChanged:(UIDatePicker *)sender
 {
+    self.datePicker.maximumDate = [NSDate date];
     self.food.productionDate = sender.date;
     [self updateProductionDateField];
 }

@@ -15,4 +15,7 @@
 @property (nonatomic) NSDateComponents *freshDays;
 @property (nonatomic) UILocalNotification *notification;
 
+- (NSInteger)remainDays;
+- (void)updateNotification;
+
 @end

@@ -74,9 +74,7 @@
     FREFood *food = self.foods[indexPath.row];
     cell.textLabel.text = food.name;
 
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *elapsed = [calendar components:NSDayCalendarUnit fromDate:food.productionDate toDate:[NSDate date] options:0];
-    NSInteger remainDays = food.freshDays.day - elapsed.day;
+    NSInteger remainDays = [food remainDays];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld day%@", remainDays, fabs(remainDays) < 2 ? @"" : @"s"];
     cell.detailTextLabel.textColor = remainDays < 0 ? [UIColor redColor] : [UIColor grayColor];
 
