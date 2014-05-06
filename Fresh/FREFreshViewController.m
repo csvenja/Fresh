@@ -30,12 +30,16 @@
     FREFood *food1 = [[FREFood alloc] init];
     food1.name = @"pork";
     food1.productionDate = [NSDate date];
-    food1.freshDays = @3;
+    food1.freshDays = [[NSDateComponents alloc] init];
+    food1.freshDays.day = 3;
+    food1.notification = [[UILocalNotification alloc] init];
 
     FREFood *food2 = [[FREFood alloc] init];
     food2.name = @"cherry";
     food2.productionDate = [NSDate date];
-    food2.freshDays = @3;
+    food2.freshDays = [[NSDateComponents alloc] init];
+    food2.freshDays.day = 3;
+    food2.notification = [[UILocalNotification alloc] init];
 
     self.foods = [@[food1, food2] mutableCopy];
 
@@ -67,10 +71,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.foods[indexPath.row] name];
-    NSInteger elapsedDays = [[NSDate date] timeIntervalSinceDate:[self.foods[indexPath.row] productionDate]] / 60 / 60 / 24;
-    NSInteger remainDays = [self.foods[indexPath.row] freshDays].integerValue - elapsedDays;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld day%@", remainDays, remainDays < 1 ? @"" : @"s"];
+    FREFood *food = self.foods[indexPath.row];
+    cell.textLabel.text = food.name;
+
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *elapsed = [calendar components:NSDayCalendarUnit fromDate:food.productionDate toDate:[NSDate date] options:0];
+    NSInteger remainDays = food.freshDays.day - elapsed.day;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld day%@", remainDays, fabs(remainDays) < 2 ? @"" : @"s"];
+    cell.detailTextLabel.textColor = remainDays < 0 ? [UIColor redColor] : [UIColor grayColor];
 
     return cell;
 }

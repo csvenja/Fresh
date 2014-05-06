@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSDate *productionDate;
-@property (nonatomic) NSNumber *freshDays;
+@property (nonatomic) NSDateComponents *freshDays;
+@property (nonatomic) UILocalNotification *notification;
 
 @end
