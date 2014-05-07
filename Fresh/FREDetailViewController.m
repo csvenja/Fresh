@@ -40,6 +40,11 @@ const int defaultFreshDays = 3;
     self.productionDateField.text = [NSDateFormatter localizedStringFromDate:self.food.productionDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
 }
 
+- (void)takePhoto
+{
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,9 +58,14 @@ const int defaultFreshDays = 3;
         self.food.freshDays = [[NSDateComponents alloc] init];
         self.food.freshDays.day = defaultFreshDays;
         self.food.notification = [[UILocalNotification alloc] init];
-
+        self.food.image = [UIImage imageNamed:@"66"];
         [self.nameField becomeFirstResponder];
     }
+
+    self.nameCell.imageView.image = self.food.image;
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(takePicture)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    [self.nameCell.imageView addGestureRecognizer:tapRecognizer];
 
     self.productionDateField.inputView = self.datePicker;
     self.datePicker.date = self.food.productionDate;

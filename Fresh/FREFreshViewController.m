@@ -33,6 +33,7 @@
     food1.freshDays = [[NSDateComponents alloc] init];
     food1.freshDays.day = 3;
     food1.notification = [[UILocalNotification alloc] init];
+    food1.image = [UIImage imageNamed:@"66"];
 
     FREFood *food2 = [[FREFood alloc] init];
     food2.name = @"cherry";
@@ -40,6 +41,7 @@
     food2.freshDays = [[NSDateComponents alloc] init];
     food2.freshDays.day = 3;
     food2.notification = [[UILocalNotification alloc] init];
+    food2.image = [UIImage imageNamed:@"66"];
 
     self.foods = [@[food1, food2] mutableCopy];
 
@@ -73,6 +75,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
     FREFood *food = self.foods[indexPath.row];
     cell.textLabel.text = food.name;
+    cell.imageView.image = food.image;
 
     NSInteger remainDays = [food remainDays];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld day%@", remainDays, fabs(remainDays) < 2 ? @"" : @"s"];

@@ -14,6 +14,7 @@
 @property (nonatomic) NSDate *productionDate;
 @property (nonatomic) NSDateComponents *freshDays;
 @property (nonatomic) UILocalNotification *notification;
+@property (nonatomic) UIImage *image;
 
 - (NSInteger)remainDays;
 - (void)updateNotification;

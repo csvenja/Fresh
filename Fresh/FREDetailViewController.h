@@ -23,5 +23,6 @@ typedef NS_ENUM(NSInteger, FREDetailViewFunction) {
 @property (weak, nonatomic) IBOutlet UITextField *productionDateField;
 @property (weak, nonatomic) IBOutlet UILabel *freshDaysField;
 @property (weak, nonatomic) IBOutlet UITableViewCell *submitCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *nameCell;
 
 @end
