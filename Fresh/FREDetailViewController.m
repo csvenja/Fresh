@@ -42,7 +42,7 @@ const int defaultFreshDays = 3;
 
 - (void)takePhoto
 {
-
+    
 }
 
 - (void)viewDidLoad
