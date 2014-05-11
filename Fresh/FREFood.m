@@ -25,6 +25,9 @@
 
 - (void)updateNotification
 {
+    if (self.notification) {
+        [[UIApplication sharedApplication] cancelLocalNotification:self.notification];
+    }
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *notificationDays = [[NSDateComponents alloc] init];
     notificationDays.day = self.freshDays.day / 5;

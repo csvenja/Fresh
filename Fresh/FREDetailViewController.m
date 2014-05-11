@@ -30,6 +30,7 @@ const int defaultFreshDays = 3;
 
 - (void)updateFreshDaysField
 {
+    self.daysStepper.value = self.food.freshDays.day;
     self.freshDaysField.text = [NSString stringWithFormat:@"%ld day%@",
                                 self.food.freshDays.day,
                                 self.food.freshDays.day < 2 ? @"" : @"s"];
@@ -37,6 +38,7 @@ const int defaultFreshDays = 3;
 
 - (void)updateProductionDateField
 {
+    self.datePicker.date = self.food.productionDate;
     self.productionDateField.text = [NSDateFormatter localizedStringFromDate:self.food.productionDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
 }
 
